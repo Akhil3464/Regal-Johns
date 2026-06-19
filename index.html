@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regal Johns</title>
+    <link rel="icon" type="image/png" href="assets/image/favicon.svg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Js-->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body class="font-sans text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-md fixed top-0 w-full z-50">
+      <div
+        class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"
+      >
+        <div>
+          <img src="assets/image/logo.svg" class="w-[120px]" />
+        </div>
+        <nav class="hidden md:flex space-x-8">
+          <a href="#home" class="nav-link hover:text-[#ED1D24]">Home</a>
+          <a href="#about" class="nav-link hover:text-[#ED1D24]">About</a>
+          <a href="#services" class="nav-link hover:text-[#ED1D24]">Services</a>
+          <a href="#contact" class="nav-link hover:text-[#ED1D24]">Contact</a>
+        </nav>
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-2xl">&#9776;</button>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+        <a href="#home" class="block py-2 nav-link">Home</a>
+        <a href="#about" class="block py-2 nav-link">About</a>
+        <a href="#services" class="block py-2 nav-link">Services</a>
+        <a href="#contact" class="block py-2 nav-link">Contact</a>
+      </div>
+    </header>
+
+    <!-- Home Section -->
+
+    <section
+      id="home"
+      class="scroll-mt-28 pt-28 relative w-full lg:h-screen bg-cover bg-center text-white banner pb-20"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
+      <div class="absolute inset-0 bg-black/50"></div>
+      <div
+        class="relative z-10 max-w-6xl mx-auto h-full flex flex-col justify-center px-6"
+      >
+        <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
+          Bringing Kerala Closer to You – Right at Your Doorstep in the UK
+        </h1>
+        <p class="text-lg md:text-xl max-w-2xl mb-10">
+          From traditional goods to daily needs, we courier and deliver what you
+          love from Kerala straight to your home in the UK.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a
+            href="https://wa.me/+916282063679?text=Hello"
+            class="inline-block"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button
+              class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-full text-lg font-medium transition-all duration-300 flex items-center gap-2"
+            >
+              Send a Courier <span class="text-xl">→</span>
+            </button>
+          </a>
+          <a
+            href="mailto:info@regaljohns.uk"
+            class="inline-block"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button
+              class="bg-white hover:bg-red-50 text-[#ED1D24] px-6 py-3 rounded-full text-lg font-medium transition-all duration-300 flex items-center gap-2"
+            >
+              Request a Quote <span class="text-xl">→</span>
+            </button>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section
+      id="about"
+      class="scroll-mt-28 pt-28 w-full px-6"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
+      <div
+        class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-10"
+      >
+        <div class="flex-1">
+          <h2 class="text-3xl md:text-4xl font-semibold mb-4">
+            About <span class="text-[#ED1D24]">Us</span>
+          </h2>
+          <h3 class="text-2xl font-bold mb-4 text-gray-800">
+            Kerala to UK — Handled with Care
+          </h3>
+          <p class="text-gray-600 text-lg leading-relaxed">
+            Regal Johns UK is a trusted international trade and courier company
+            with a strong presence in both Kerala and the United Kingdom. Our
+            mission is to connect families, communities, and cultures through
+            reliable and affordable logistics.
+            <br /><br />
+            Whether it’s a sentimental gift, household item, or a special
+            delivery from home — we make it possible.
+          </p>
+        </div>
+        <div class="flex-1">
+          <img
+            src="assets/image/about.svg"
+            alt="Cargo Ship"
+            class="w-full h-auto rounded-lg shadow-md"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Choose  Section -->
+
+    <section data-aos="fade-up" data-aos-duration="1000" class="pt-28 px-6">
+      <div id="why-choose"></div>
+    </section>
+
+    <!--specialize-sending -->
+    <section data-aos="fade-up" data-aos-duration="1000" class="pt-28 px-6">
+      <div id="specialize-sending" class=""></div>
+    </section>
+
+    <!--services -->
+
+    <section
+      id="services"
+      class="scroll-mt-28 pt-28"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
+      <div id="our-services" class="px-6"></div>
+    </section>
+
+    <!--testimonial -->
+
+    <section data-aos="fade-up" data-aos-duration="1000" class="pt-28 px-6">
+      <div id="testimonial-container"></div>
+    </section>
+
+    <!--FAQ -->
+
+    <section class="pt-28 px-6">
+      <div id="faq-container"></div>
+    </section>
+
+    <!--contact -->
+
+    <section id="contact" class="scroll-mt-28 py-28 px-6">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 text-left">
+          Contact <span class="text-[#ED1D24]">Us</span>
+        </h2>
+        <p class="mt-2 text-[26px] md:text-3xl text-[#000000] font-semibold">
+          Let’s Get Started
+        </p>
+        <p class="mt-2 mb-8 text-[20px] md:text-[28px] text-[#000000]">
+          Have a courier? Want to buy something from Kerala? We’re just a
+          message away.
+        </p>
+
+        <form class="grid md:grid-cols-2 gap-4 max-w-5xl">
+          <input
+            type="text"
+            placeholder="Name *"
+            class="border p-3 rounded-md w-full"
+            required
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            class="border p-3 rounded-md w-full"
+          />
+          <input
+            type="text"
+            placeholder="Phone number *"
+            class="border p-3 rounded-md w-full md:col-span-1"
+            required
+          />
+          <input
+            type="text"
+            placeholder="Message"
+            class="border p-3 rounded-md w-full md:col-span-1"
+          />
+        </form>
+
+        <div class="flex flex-wrap gap-4 pt-10 justify-center">
+          <a
+            href="https://wa.me/+916282063679?text=Hello"
+            class="inline-block"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button
+              class="bg-red-600 text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2 hover:bg-red-700 transition"
+            >
+              Send Message <span>→</span>
+            </button>
+          </a>
+          <a
+            href="https://wa.me/+916282063679?text=Hello"
+            class="inline-block"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button
+              class="bg-white text-[#ED1D24] border border-red-600 px-6 py-3 rounded-full font-medium hover:bg-red-50 transition"
+            >
+              Get a Quote →
+            </button>
+          </a>
+        </div>
+
+        <div
+          class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 text-gray-700"
+        >
+          <div class="flex items-start gap-4">
+            <div
+              class="bg-red-500 w-[55px] h-[55px] rounded-full flex items-center justify-center"
+            >
+              <img src="assets/image/contact/location.svg" />
+            </div>
+            <div>
+              <p class="text-[18px] text-[#000000]">
+                UK Office: Herdfordshire, England
+              </p>
+              <p class="text-[18px] text-[#000000]">
+                Kerala Office: Thiruvalla , India
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <div
+              class="bg-red-500 w-[55px] h-[55px] rounded-full flex items-center justify-center"
+            >
+              <img src="assets/image/contact/email.svg" />
+            </div>
+            <a
+              href="mailto:info@regaljohns.uk"
+              class="text-[18px] text-[#000000]"
+              >info@regaljohns.uk</a
+            >
+          </div>
+
+          <div class="flex items-center gap-4">
+            <div
+              class="bg-red-500 w-[55px] h-[55px] rounded-full flex items-center justify-center"
+            >
+              <img src="assets/image/contact/phone.svg" />
+            </div>
+            <div>
+              <a href="tel:+916282063679" class="text-[18px] text-[#000000]"
+                >+91 6282063679</a
+              >
+              <br />
+              <a href="tel:+447774499467" class="text-[18px] text-[#000000]"
+                >+44 7774499467</a
+              >
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <div
+              class="bg-red-500 w-[55px] h-[55px] rounded-full flex items-center justify-center"
+            >
+              <img src="assets/image/contact/whatsapp.svg" />
+            </div>
+            <a
+              href="https://wa.me/+916282063679?text=Hello"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-[18px] text-[#000000]"
+              >+91 6282063679</a
+            >
+          </div>
+
+          <div class="flex items-center gap-4">
+            <div
+              class="bg-red-500 w-[55px] h-[55px] rounded-full flex items-center justify-center"
+            >
+              <img src="assets/image/contact/time.svg" />
+            </div>
+
+            <p class="text-[18px] text-[#000000]">9 AM – 9 PM IST / GMT</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- -->
+    <!-- Contact Sidebar -->
+    <div class="fixed top-[80%] left-0 transform -translate-y-1/2 z-50">
+      <div class="flex flex-col items-end space-y-2">
+        <!-- Vertical "Contact Us" Label -->
+           <!-- <a
+          href="https://wa.me/+916282063679?text=Hello"
+          target="_blank"
+          class="bg-orange-500 text-white text-xs font-semibold px-2 py-3 rounded-l-lg transform -rotate-90 cursor-pointer shadow-md"
+        >
+        CONTACT US
+        </a> -->
+       
+
+        <!-- WhatsApp Button -->
+        <a
+          href="https://wa.me/+916282063679?text=Hello"
+          target="_blank"
+          class="bg-white p-3 rounded-md shadow-md hover:bg-green-100"
+        >
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+            alt="WhatsApp"
+            class="w-8 h-8"
+          />
+        </a>
+
+        <!-- Phone Button -->
+        <a
+          href="tel:+916282063679"
+          class="bg-white p-3 rounded-md shadow-md hover:bg-blue-100"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-8 h-8 text-blue-500"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21 11.05 11.05 0 003.47.55 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.05 11.05 0 00.55 3.47 1 1 0 01-.21 1.11l-2.2 2.21z"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12 px-6">
+      <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-8">
+        <!-- Logo + Description -->
+        <div>
+          <img
+            src="assets/image/logo.svg"
+            alt="Regal Johns Logo"
+            class="w-[200px] mb-4"
+          />
+          <p class="text-[16px] text-[#DEE2DD]">
+            Regal Johns UK is a trusted international trade and courier company
+            with a strong presence in both Kerala and the United Kingdom. Our
+            mission is to connect families, communities, and cultures through
+            reliable and affordable logistics.
+          </p>
+        </div>
+
+        <!-- Link Section -->
+        <div>
+          <h3 class="font-semibold text-[24px] mb-4 text-[#FFFFFF]">Link</h3>
+          <ul class="space-y-2 text-[16px] text-[#DEE2DD]">
+            <li><a href="#home" class="hover:text-white">Home</a></li>
+            <li><a href="#about" class="hover:text-white">About</a></li>
+            <li><a href="#services" class="hover:text-white">Services</a></li>
+            <li><a href="#contact" class="hover:text-white">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Help Section -->
+        <div>
+          <h3 class="font-semibold text-[24px] mb-4 text-[#FFFFFF]">Help</h3>
+          <ul class="space-y-2 text-[16px] text-[#DEE2DD]">
+            <li><a href="" class="hover:text-white">Terms & Conditions</a></li>
+            <li><a href="" class="hover:text-white">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Media -->
+        <div>
+          <h3 class="font-semibold text-[24px] mb-4 text-[#FFFFFF]">
+            Social media
+          </h3>
+          <div class="flex gap-4">
+            <a
+              href="https://www.facebook.com/share/1CB8FMhgJB/"
+              class="bg-red-600 p-3 rounded-full text-white hover:bg-red-700"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="assets/image/socialMedia/faceBook.svg" alt="Facebook" />
+            </a>
+            <a
+              href="https://www.instagram.com/regaljohnsinternationaluk_ltd?igsh=MWp6eXZqc3J0dnZ6NA== "
+              class="bg-red-600 p-3 rounded-full text-white hover:bg-red-700"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="assets/image/socialMedia/instagram.svg"
+                alt="Instagram"
+              />
+            </a>
+            <a
+              href="https://wa.me/+916282063679?text=Hello"
+              class="bg-red-600 p-3 rounded-full text-white hover:bg-red-700"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="assets/image/socialMedia/whatsapp.svg" alt="WhatsApp" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="text-center mt-10 font-semibold text-[24px]">
+          Our sister <span class="text-[#ED1D24]">concern</span>
+        </div>
+
+        <div class="flex justify-center mt-5">
+          <a
+            href="https://www.unitedsrlogistics.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="assets/image/unitedSrLogo.svg" class="w-[200px]" />
+          </a>
+        </div>
+      </div>
+
+      <!-- Bottom Copyright -->
+      <div
+        class="border-t border-gray-800 mt-10 pt-6 text-center text-[16px] text-[#DEE2DD]"
+      >
+        © 2025 Regal John All rights reserved | Developed by DyraMuse
+        Creativescape Pvt. Ltd.
+      </div>
+    </footer>
+
+    <!-- Mobile menu toggle script -->
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="main.js"></script>
+    <script src="styles.js"></script>
+    <script></script>
+  </body>
+</html>
