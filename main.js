@@ -153,27 +153,14 @@ let html = `
     </h2>
 `;
 
-// First row (3 items)
-html += `<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center mb-10">`;
+// Flex-wrap + justify-center auto-centers any incomplete last row
+// mobile: 1 per row | tablet (sm): 2 per row -> 2,2,1 centered | desktop (lg): 3 per row -> 3,2 centered
+html += `<div class="flex flex-wrap justify-center gap-6 mb-10">`;
 
-services.slice(0, 3).forEach((service) => {
+services.forEach((service) => {
   html += `
-    <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl hover:bg-red-50 hover:text-red-600 transition-all duration-300">
-      <img src="${service.icon}" alt="${service.title}" class="h-12 mx-auto mb-4" />
-      <h3 class="text-[20px] font-semibold mb-2 text-gray-800 text-center">${service.title}</h3>
-      <p class="text-sm text-gray-600 text-center">${service.description}</p>
-    </div>
-  `;
-});
-
-html += `</div>`;
-
-// Second row (2 items centered)
-html += `<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 justify-center max-w-2xl mx-auto">`;
-
-services.slice(3).forEach((service) => {
-  html += `
-    <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl hover:bg-red-50 hover:text-red-600 transition-all duration-300">
+    <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl hover:bg-red-50 hover:text-red-600 transition-all duration-300
+                w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]">
       <img src="${service.icon}" alt="${service.title}" class="h-12 mx-auto mb-4" />
       <h3 class="text-[20px] font-semibold mb-2 text-gray-800 text-center">${service.title}</h3>
       <p class="text-sm text-gray-600 text-center">${service.description}</p>

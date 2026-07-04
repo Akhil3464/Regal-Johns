@@ -11,6 +11,10 @@ html {
   background-image: url(assets/image/Photo.svg);
   background-repeat: no-repeat;
 }
+.secondary-banner{
+  background-image: url(assets/image/image1.svg);
+  background-repeat: no-repeat;
+}
   .faq-answer {
     max-height: 0;
     overflow: hidden;
