@@ -193,8 +193,8 @@ servicesContainer.innerHTML = html;
 const testimonials = [
   {
     image: "assets/image/testimonial/testimonial1.svg",
-    name: "Testimonial 1",
-    quote: "I received my mother’s handmade snacks in perfect condition in London — thank you, Regal Johns!",
+    name: "Afeeha Hashim",
+    quote: "This courier service is excellent! Delivery is fast, arriving within 5 days. The packaging is extremely secure so much so that it’s a bit hard to unpack, but that just shows how well they protect the items. Overall, one of the best services I’ve used for safe and reliable delivery.",
     rating: 5,
     bg: "bg-white",
     text: "text-gray-700",
@@ -204,8 +204,8 @@ const testimonials = [
   },
   {
     image: "assets/image/testimonial/testimonial2.svg",
-    name: "Testimonial 2",
-    quote: "Their mattress shipping was fast and affordable. Highly recommend.” — George, Birmingham",
+    name: "Kichu Varghese",
+    quote: "Excellent service from REGAL JOHNS INTERNATIONAL. My package was delivered safely and on time, and the box arrived in perfect condition. The staff was professional, responsive, and kept me updated throughout the process. I’m very satisfied with the overall experience and would definitely recommend their service to others. Thank you for the smooth delivery.",
     rating: 5,
     bg: "bg-red-600",
     text: "text-white",
