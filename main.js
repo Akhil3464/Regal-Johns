@@ -12,13 +12,13 @@ const whyFeatures = [
 const whyContainer = document.getElementById("why-choose");
 
 let whyHTML = `
-  <div class="bg-white rounded-3xl shadow p-6 md:p-10 flex flex-col md:flex-row items-center gap-10 max-w-6xl mx-auto">
+  <div class=" flex flex-col md:flex-row items-center gap-10 max-w-6xl mx-auto">
     <div class="w-full md:w-1/2">
       <img src="assets/image/chooseRegalJohnsUK.svg" alt="Container Yard" class="rounded-xl w-full object-cover shadow" />
     </div>
     <div class="w-full md:w-1/2">
       <h2 class="text-3xl md:text-4xl font-semibold mb-6">
-        Why Choose <span class="text-red-600">Regal Johns UK</span>?
+        Why Choose <span class="text-red-600">Regal Johns </span>?
       </h2>
       <ul class="space-y-4">
 `;
@@ -48,78 +48,110 @@ const sendingItems = [
   { image: "assets/image/specializIcon/studyMaterials.svg", text: "Books & Study Materials" },
   { image: "assets/image/specializIcon/gift.svg", text: "Gift Items" },
   { image: "assets/image/specializIcon/luggage.svg", text: "Excess Baggage & Luggage" },
+  { image: "assets/image/specializIcon/machinery.svg", text: "Machinery" },
+  { image: "assets/image/specializIcon/electrical.svg", text: "Electrical Equipment" },
+  { image: "assets/image/specializIcon/frames.svg", text: "Heavy Photo Frames" },
+  { image: "assets/image/specializIcon/curtains.svg", text: "Blinds & Curtains" },
 ];
 const specializeImages = [
   "assets/image/specialize.svg",
-  "assets/image/specialize1.jpg",
-  "assets/image/specialize2.jpg",
-  "assets/image/specialize3.jpg",
-  "assets/image/specialize4.jpg",
-  "assets/image/specialize5.jpg",
-  "assets/image/specialize6.jpg",
-  "assets/image/specialize7.jpg",
-  "assets/image/specialize8.jpg",
-  "assets/image/specialize9.jpg",
-  "assets/image/specialize10.jpg",
+  "assets/image/specialize1.svg",
+  "assets/image/specialize2.svg",
+  "assets/image/specialize3.svg",
+  "assets/image/specialize4.svg",
+  "assets/image/specialize5.svg",
+  "assets/image/specialize6.svg",
+  "assets/image/specialize7.svg",
+  "assets/image/specialize8.svg",
+  "assets/image/specialize9.svg",
+  "assets/image/specialize10.svg",
  
 ];
 
 const specializeContainer = document.getElementById("specialize-sending");
 
 let specializeHTML = `
-  <div class=" p-6 md:p-10 flex flex-col lg:flex-row items-center gap-10 max-w-6xl mx-auto">
-    <div class="w-full lg:w-1/2">
-      <h2 class="text-3xl md:text-4xl font-semibold mb-6">
-        We Specialize in <span class="text-red-600">Sending</span>
-      </h2>
-      <ul class="space-y-4">
+<div class="bg-white rounded-3xl shadow p-8 md:p-10 max-w-7xl mx-auto">
+    <div class="grid lg:grid-cols-2 gap-10 items-center">
+
+        <!-- Left -->
+        <div>
+            <h2 class="text-3xl md:text-4xl font-bold mb-8">
+                We Specialize in
+                <span class="text-red-600">Sending</span>
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-8">
 `;
 
 sendingItems.forEach((item) => {
-  specializeHTML += `
-    <li class="flex items-center gap-4">
-      <div class="bg-red-500 w-[55px] h-[55px] rounded-full flex items-center justify-center">
-        <img src="${item.image}" alt="icon"  />
-      </div>
-      <span class="text-gray-800 text-base md:text-lg font-medium">${item.text}</span>
-    </li>
-  `;
+    specializeHTML += `
+        <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center shrink-0">
+                <img src="${item.image}" alt="" class="w-6 h-6 object-contain">
+            </div>
+
+            <p class="text-gray-700 font-medium">
+                ${item.text}
+            </p>
+        </div>
+    `;
 });
 
 specializeHTML += `
-      </ul>
+            </div>
+        </div>
+
+        <!-- Right -->
+        <div class="flex items-center justify-center h-full">
+        <div class="image-box">
+         <img
+                id="specialize-loop-image"
+                src="${specializeImages[0]}"
+                class="w-full h-full object-cover rounded-lg shadow-lg"
+                alt=""
+            >
+        </div>
+           
+        </div>
+
     </div>
-    <div class="w-full lg:w-1/2">
-      <img id="specialize-loop-image" src="${specializeImages[0]}" alt="Sending Items" class="rounded-xl w-full object-cover shadow transition-all duration-700" />
-    </div>
-  </div>
+</div>
 `;
 
 specializeContainer.innerHTML = specializeHTML;
 const loopImageElement = document.getElementById("specialize-loop-image");
 let currentImageIndex = 0;
 
-const directions = ['slide-top', 'slide-bottom', 'slide-left'];
+// Preload all images
+const preloadedImages = specializeImages.map((src) => {
+    const img = new Image();
+    img.src = src;
+    return img;
+});
 
 setInterval(() => {
-  currentImageIndex = (currentImageIndex + 1) % specializeImages.length;
-  const directionClass = directions[currentImageIndex % directions.length];
 
- 
-  loopImageElement.classList.remove('slide-top', 'slide-bottom', 'slide-left', 'slide-right');
+    loopImageElement.classList.remove("slide-in-right");
+    loopImageElement.classList.add("slide-out-left");
 
-  
-  void loopImageElement.offsetWidth;
+    setTimeout(() => {
 
-  
-  loopImageElement.src = specializeImages[currentImageIndex];
-  loopImageElement.classList.add(directionClass);
+        currentImageIndex = (currentImageIndex + 1) % specializeImages.length;
+
+        loopImageElement.src = preloadedImages[currentImageIndex].src;
+
+        loopImageElement.classList.remove("slide-out-left");
+        loopImageElement.classList.add("slide-in-right");
+
+    }, 600); // match CSS animation duration
+
 }, 3000);
 
 const services = [
   {
     icon: "assets/image/serviceIcons/courierServices.svg",
-    title: "Courier Services – Kerala to UK",
+    title: "Courier Services – Kerala to Worldwide Service",
     description: "Door-to-door courier services with secure packaging and real-time tracking. We handle everything from pickup to delivery.",
   },
   {
@@ -147,7 +179,7 @@ const services = [
 const servicesContainer = document.getElementById("our-services");
 
 let html = `
-  <div class="bg-white rounded-3xl shadow p-6 md:p-10 max-w-7xl mx-auto text-center">
+  <div class=" max-w-7xl mx-auto text-center">
     <h2 class="text-3xl md:text-4xl font-semibold mb-12">
       Our <span class="text-red-600">Services</span>
     </h2>
@@ -159,7 +191,7 @@ html += `<div class="flex flex-wrap justify-center gap-6 mb-10">`;
 
 services.forEach((service) => {
   html += `
-    <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl hover:bg-red-50 hover:text-red-600 transition-all duration-300
+    <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl Why Choose Regal Johns ? hover:text-red-600 transition-all duration-300
                 w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]">
       <img src="${service.icon}" alt="${service.title}" class="h-12 mx-auto mb-4" />
       <h3 class="text-[20px] font-semibold mb-2 text-gray-800 text-center">${service.title}</h3>
@@ -221,7 +253,7 @@ let testimonialHTML = `
   <h2 class="text-3xl md:text-4xl font-semibold text-center mb-12">
     Customer <span class="text-red-600">Testimonials</span>
   </h2>
-  <div class="grid md:grid-cols-2  max-w-6xl mx-auto">
+  <div class="grid md:grid-cols-2  max-w-7xl mx-auto">
 `;
 
 testimonials.forEach((t) => {
