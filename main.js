@@ -12,7 +12,7 @@ const whyFeatures = [
 const whyContainer = document.getElementById("why-choose");
 
 let whyHTML = `
-  <div class=" flex flex-col md:flex-row items-center gap-10 max-w-6xl mx-auto">
+  <div class=" bg-white rounded-3xl shadow px-6 py-6 md:px-10 md:py-10 flex flex-col md:flex-row items-center gap-10 max-w-7xl mx-auto">
     <div class="w-full md:w-1/2">
       <img src="assets/image/chooseRegalJohnsUK.svg" alt="Container Yard" class="rounded-xl w-full object-cover shadow" />
     </div>
@@ -71,7 +71,7 @@ const specializeImages = [
 const specializeContainer = document.getElementById("specialize-sending");
 
 let specializeHTML = `
-<div class="bg-white rounded-3xl shadow p-8 md:p-10 max-w-7xl mx-auto">
+<div class="max-w-7xl mx-auto">
     <div class="grid lg:grid-cols-2 gap-10 items-center">
 
         <!-- Left -->
@@ -179,7 +179,7 @@ const services = [
 const servicesContainer = document.getElementById("our-services");
 
 let html = `
-  <div class=" max-w-7xl mx-auto text-center">
+  <div class=" bg-white rounded-3xl shadow p-8 md:p-10  max-w-7xl mx-auto text-center">
     <h2 class="text-3xl md:text-4xl font-semibold mb-12">
       Our <span class="text-red-600">Services</span>
     </h2>
